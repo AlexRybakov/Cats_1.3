@@ -1,0 +1,14 @@
+.header {
+    box-shadow: 0 0 2px 0 var(--bg-secondary-color);
+    background-color: royalblue;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+

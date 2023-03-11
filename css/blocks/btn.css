@@ -1,0 +1,20 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 6px 10px;
+    font-size: 18px;
+    border: none;
+    gap: 10px;
+    background-color: #3E4851;
+    color: var(--text-light-color);
+    outline: none;
+}
+
+
+
+.btn:hover, .btn:focus{
+    background-color: crimson;
+}
+

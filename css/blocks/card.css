@@ -1,0 +1,114 @@
+.card {
+  height: 166px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card__link {
+  position: absolute;
+  z-index: 2;
+  text-decoration: none;
+}
+
+.card__name {
+  font-size: 18px;
+  font-weight: normal;
+
+  margin: 0;
+  border-radius: 10px;
+  transition: padding 0.3s;
+}
+
+.card:hover .card__name{
+  background-color: #fff8;
+  padding: 10px 40px 10px 40px;
+}
+
+.card__name:hover:after {
+  font: var(--fa-font-solid);
+  content: "\f00e";
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  position:  absolute;
+  right: 10px;
+  margin-left: 5px;
+}
+
+.card__like {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background-color: transparent;
+  background-image: none;
+  color: var(--text-secondary-color);
+  padding: 0;
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.3s;
+
+}
+
+
+.card__like_active {
+  color: var(--tertiary-color);
+  --animate-duration: 1s;
+  animation-name: heartBeat;
+  animation-duration: calc(var(--animate-duration) * 1.3);
+  animation-timing-function: ease-in-out;
+}
+
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff8;
+  backdrop-filter: blur(2px);
+  visibility: visible;
+  transition: .3s linear;
+  transition-property: backdrop-filter, background-color;
+  pointer-events: none;
+}
+
+.card:hover::before {
+  backdrop-filter: blur(0);
+  background-color: transparent;
+}
+
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+
+  14% {
+    transform: scale(1.3);
+  }
+
+  28% {
+    transform: scale(1);
+  }
+
+  42% {
+    transform: scale(1.3);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+}

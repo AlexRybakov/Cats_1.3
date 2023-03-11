@@ -1,0 +1,9 @@
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.socials__link {
+    color: var(--bg-secondary-color);
+}

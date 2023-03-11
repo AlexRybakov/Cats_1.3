@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BadCats</title>
+    <link rel="shortcut icon" href="/assets/images/shield-cat-solid.svg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/3e2b3d0dcf.js" crossorigin="anonymous"></script>
+    <script src="
+    https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js
+    " defer></script>
+
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body class="page">
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="logo"><i class="fa-solid fa-shield-cat"></i> BadCats</a>
+            <button class="btn" id="add"><i class="fa-solid fa-plus"></i></button>
+            <button class="btn" id="login">Войти</button>
+        </div>
+    </header>
+    <main class="main container">
+        <section class="cards">
+            
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+
+        <div class="container footer__container">
+            <span class="copyright">©2023 Made by AlexRybakov</span>
+
+            <div class="socials">
+                <a class="socials__link" href="https://github.com/AlexRybakov" target="_blank"><i class="fa-brands fa-github socials__icon"></i></a>
+                <a class="socials__link" href="https://vk.com/rybakovalexandr" target="_blank"><i class="fa-brands fa-vk socials__icon"></i></a>
+                <a class="socials__link" href="#"><i class="fa-brands fa-telegram socials__icon"></i></a>
+            </nav>
+        </div>
+    </footer>
+
+    <div class="popup popup-cat-info">
+        <div class="popup__container">
+            <button class="popup__close btn popup__close_external"><i class="fa-solid fa-xmark"></i></button>
+            <div class="popup__content"></div>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup popup-login">
+        <div class="popup__container">
+            <button class="popup__close btn"><i class="fa-solid fa-xmark"></i></button>
+            <h2>Авторизация</h2>
+            <form class="form" id="popup-form-login">
+                <input type="email" class="form__input" name="email" required placeholder="email">
+                <input type="password" class="form__input" name="password" placeholder="password">
+                <button type="submit" class="form__btn btn">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup popup-cat-description">
+        <div class="popup__container">
+            <button class="popup__close btn popup__close_external"><i class="fa-solid fa-xmark"></i></button>
+            <div class="popup__name"></div>
+            <img src="#" class="popup__image" alt="">
+            <div class="popup__description"></div>
+        </div>
+    </div>
+    <div class="popup popup-cat-image">
+        <div class="popup__container">
+            <button class="popup__close btn popup__close_external"><i class="fa-solid fa-xmark"></i></button>
+            <img src="#" class="popup__image" alt="">
+        </div>
+    </div>
+    <div class="popup popup-add">
+        <div class="popup__container">
+            <button class="popup__close btn"><i class="fa-solid fa-xmark"></i></button>
+            <h2>Добавить питомца</h2>
+            <form class="form" id="popup-form-add">
+                <div class="form__image"></div>
+                <input type="number" class="form__input" name="id" min="1" required placeholder="id">
+                <input type="number" class="form__input" name="age" placeholder="Возраст">
+                <input type="text" class="form__input" name="name" required placeholder="Имя">
+                <input type="number" class="form__input" name="rate" placeholder="Рейтинг (0-10)" min="0" max="10">
+                <textarea name="description" class="form__input form__textarea" placeholder="Описание"></textarea>
+                <label class="form__checkbox-wrap">
+                    <input type="checkbox" name="favorite" class="form__checkbox" placeholder="">
+                    <span class="form__label">Любимчик</span>
+                    <span class="form__fake-checkbox"><i class="fa-regular fa-circle-check"></i></span>
+                </label>
+                <input type="url" class="form__input" name="image" placeholder="Ссылка на фото">
+                <button type="submit" class="form__btn btn">Добавить котика</button>
+            </form>
+        </div>
+    </div>
+
+    <template id="card-template">
+        <div class="card">
+            <img src="#" alt="Изабражение" class="card__image">
+            <a href="#" class="card__link">
+                <h2 class="card__name"></h2>
+            </a>
+            <button class="card__like" aria-label="Поставить лайк"><i class="fa-solid fa-heart fa-2x"></i></button>
+            <div class="card__info">
+                <button class="btn-text" data-action="show">INFO</button>
+            </div>
+        </div>
+    </template>
+
+    <template id="cats-info-template">
+        <div class="cat-info">
+            <button class="cat-info__edited"><i class="fa-regular fa-pen-to-square"></i>Редактировать</button>
+            <button class="cat-info__saved cat-info__saved_hidden"><i class="fa-regular fa-pen-to-square"></i>Сохранить</button>
+            <button class="cat-info__deleted"><i class="fa-solid fa-trash"></i>Удалить</button>
+
+            <img src="#" class="cat-info__image" loading="lazy">
+            <span class="cat-info__id"></span>
+            <div class="cat-info__title">
+                <h2 class="cat-info__name"></h2>
+                <button class="cat-info__favourite"><i class="fa-solid fa-heart fa-2x"></i></button>
+            </div>
+            <span class="cat-info__rate"></span>
+            <div class="cat-info__age">
+                <span class="cat-info__age-val"></span>
+                <span class="cat-info__age-text"></span>
+            </div>
+            <p class="cat-info__desc"></p>
+        </div>
+
+    </template>
+    
+    <script src="./src/index.js" type="module" defer></script>
+</body>
+</html>

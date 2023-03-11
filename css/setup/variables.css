@@ -1,0 +1,14 @@
+:root {
+    --bg-main-color: #f8f7f7;
+    --bg-secondary-color: #191414;
+    --bg-overlay-color: rgba(25, 20, 20, 0.8);
+    --text-main-color: #191414;
+    --text-light-color: #f8f7f7;
+    --text-secondary-color: #7B8E98;
+    --outline-color: #CFD8DC;
+    --form-color: #ECEFF1;
+    --accent-color: #405DE6;
+    --primary-color: #FFCC00;
+    --secondary-color: #1DB954;
+    --tertiary-color: #CE2724;
+}
